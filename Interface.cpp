@@ -1,27 +1,62 @@
 #include <string>
 #include <array>
 #include <iostream>
+#include <memory>
 #include "Animals.h"
 
-const static std::array<std::string, Animal::NumTraits> TraitsList = { "Furry", "CommonPet", "CanSwim", "LivesUnderwater",
+using std::string;
+
+const static int numTraits = (int)Animal::Traits::NumTraits;
+
+const static std::array<string, numTraits> TraitsList = { "Furry", "CommonPet", "CanSwim", "LivesUnderwater",
 															"CanRun", "CanFly", "Loyal", "Arrogant", "Mammal" };
-Animal Dog{0b111010101};
-Animal Cat{ 0b111010011 };
-Animal Bird{ 0b010011000 };
-Animal Fish{ 0b011100000 };
-Animal Shark{ 0b001100000 };
 
-void PrintQuestions()
+class TraitType//base class defining basic 
 {
-	int index = 0;
+	string m_Trait;
 
-	for (int i : TraitsList[index])
+	public:
+	TraitType(string Trait) : m_Trait{ Trait }
 	{
-		std::cout << i << TraitsList[i] << "\n";
 	}
-}
+
+	string Trait() const
+	{
+		return m_Trait;
+	}
+
+	virtual string Question() const = 0;
+};
+
+class Adjectives : public TraitType
+{
+	string Question() const override
+	{
+		return "Is it " + Trait() + "?";
+	}
+};
+
+class Verbs : public TraitType
+{
+	string Question() const override
+	{
+		return "Can it " + Trait() + "?";
+	}
+};
+
+class Nouns : public TraitType
+{
+	string Question() const override
+	{
+		return "Is it a " + Trait() + "?";
+	}
+};
+
+
 
 int main()
 {
-	
+
 }
+
+
