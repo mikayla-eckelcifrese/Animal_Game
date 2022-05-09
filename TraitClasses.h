@@ -8,12 +8,13 @@
 
 using std::string;
 
+/*
 const static enum class Traits
 {
 	Furry, CommonPet, CanSwim, LivesUnderwater, CanRun, CanFly, Loyal, Arrogant, Mammal, Reptile, LivesOnLand,
 	NumTraits
 };
-
+*/
 class TraitType//base class defining basic 
 {
 	string m_Trait;
@@ -56,10 +57,5 @@ class Nouns : public TraitType
 };
 
 
-
-int main()
-{
-
-}
 
 

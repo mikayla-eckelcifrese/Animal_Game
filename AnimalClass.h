@@ -1,6 +1,7 @@
 #pragma once
 #include <bitset>
 
+
 const static enum class Traits
 {
 	Furry, CommonPet, CanSwim, LivesUnderwater, CanRun, CanFly, Loyal, Arrogant, Mammal, Reptile, LivesOnLand,
