@@ -6,10 +6,13 @@
 
 using std::string;
 
-const static int numTraits = (int)Animal::Traits::NumTraits;
+const static enum class Traits
+{
+	Furry, CommonPet, CanSwim, LivesUnderwater, CanRun, CanFly, Loyal, Arrogant, Mammal, Reptile, LivesOnLand,
+	NumTraits
+};															
 
-const static std::array<string, numTraits> TraitsList = { "Furry", "CommonPet", "CanSwim", "LivesUnderwater",
-															"CanRun", "CanFly", "Loyal", "Arrogant", "Mammal" };
+//
 
 class TraitType//base class defining basic 
 {
