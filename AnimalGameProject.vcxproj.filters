@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TraitClasses.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Interface.cpp">
+    <ClCompile Include="SourceCode\Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimalClass.h">
+    <ClInclude Include="SourceCode\AnimalClass.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCode\TraitClasses.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

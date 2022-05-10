@@ -12,14 +12,15 @@ const static auto numTraits = (int)Traits::NumTraits;
 
 struct Animal
 {
-	std::bitset<numTraits> Traits;
+	std::bitset<numTraits> Trait;
 
 	explicit Animal(std::bitset<numTraits> traits) ://Animal objects will be binary numbers where the nth digit corresponds to
 													//the animal has the nth trait in the above enum
-		Traits{ traits }//member initializer list 
+		Trait{ traits }//member initializer list 
 	{
 	}
 };
+
 const Animal Dog{ 0b11101010101 };
 const Animal Cat{ 0b11101001101 };
 const Animal Bird{ 0b01001100000 };
